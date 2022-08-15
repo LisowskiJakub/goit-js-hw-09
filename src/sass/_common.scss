@@ -1,1 +1,39 @@
-@import '~node_modules/modern-normalize/modern-normalize.css';
+#datetime-picker {
+    border-radius: 5px;
+    
+    height: 30px;
+}
+button{
+    width: 150px;
+    height: 30px;
+    border: 1px;
+    border-radius: 5px;
+    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover{
+        background-color: rgb(100, 100, 255);
+        color : #eee;
+    box-shadow: 1px 1px 7px -3px #444444;
+    
+}
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid;
+
+    background-color: #cecece;
+    margin:30px;
+
+}
+.field{
+    margin: 0px 30px;
+    border: 3px;
+}
