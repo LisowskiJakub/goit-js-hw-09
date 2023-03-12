@@ -47,7 +47,7 @@ startBtn.disabled = true;
 
 startBtn.addEventListener('click', () => {
     let startDate = new Date();
-    endDate = new Date(inputFlatPickr.value);
+    const endDate = new Date(inputFlatPickr.value);
     let distanceMs = endDate.getTime() - startDate.getTime();
     if (!distanceMs > 0) {
         Notiflix.Notify.warning('Please choose a date in the future');
