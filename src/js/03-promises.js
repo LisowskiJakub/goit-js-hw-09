@@ -4,8 +4,6 @@ const delay = document.querySelector('input[name="delay"]');
 const step = document.querySelector('input[name="step"]');
 const amount = document.querySelector('input[name="amount"]');
 const button = document.querySelector('button[type="submit"]');
-let position;
-
 
 function createPromise(position, delay) {
 
@@ -21,7 +19,6 @@ function createPromise(position, delay) {
   })
   return promise;
 }
-
 
 
 button.addEventListener('click', (e) => {
