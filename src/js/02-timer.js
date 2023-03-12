@@ -49,7 +49,7 @@ startBtn.addEventListener('click', () => {
 
     Notiflix.Notify.info('Countdown started!');
 
-    timerId = setInterval(() => {
+    const timerId = setInterval(() => {
         let countdown = new Date(inputFlatPickr.value) - new Date();
         let distance = convertMs(countdown);
         spanDays.textContent = distance.days;
