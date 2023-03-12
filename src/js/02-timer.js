@@ -46,26 +46,18 @@ flatpickr(inputFlatPickr, options)
 startBtn.disabled = true;
 
 startBtn.addEventListener('click', () => {
-    let startDate = new Date();
-    const endDate = new Date(inputFlatPickr.value);
-    let distanceMs = endDate.getTime() - startDate.getTime();
-    if (!distanceMs > 0) {
-        Notiflix.Notify.warning('Please choose a date in the future');
-        return;
-    }
 
     Notiflix.Notify.info('Countdown started!');
 
     timerId = setInterval(() => {
-        startDate = new Date();
-        distanceMs = endDate.getTime() - startDate.getTime();
-        let distance = convertMs(distanceMs);
+        let countdown = new Date(inputFlatPickr.value) - new Date();
+        let distance = convertMs(countdown);
         spanDays.textContent = distance.days;
         spanHours.textContent = distance.hours;
         spanMinutes.textContent = distance.minutes;
         spanSeconds.textContent = distance.seconds;
 
-        if (distanceMs < 1000) {
+        if (countdown < 1000) {
             clearInterval(timerId);
             Notiflix.Notify.success('Countdown finished!')
         }
