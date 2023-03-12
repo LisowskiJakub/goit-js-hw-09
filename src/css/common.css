@@ -16,3 +16,80 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 200px auto;
+  padding: 30px;
+  background-color: #8fe2dd;
+  color: #163369;
+  border-radius: 8px;
+  max-width: 450px;
+  box-shadow: 8px 8px 24px -10px rgba(66, 68, 90, 1);
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+  margin: 20px 0;
+  display: flex;
+  background-color: #eeeeee;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* .label {} */
+
+.value {
+
+  font-size: 32px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+#datetime-picker {
+  font-size: 22px;
+
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  background-color: #eeeeee;
+  margin: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#datetime-picker:hover {
+
+  box-shadow: 4px 4px 12px -5px rgb(90, 66, 66);
+  cursor: pointer;
+}
+
+.button {
+  font-size: 22px;
+  min-width: 120px;
+  border-radius: 6px;
+  border: none;
+  background-color: #eeeeee;
+  transition: box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
+  padding: 5px;
+
+}
+
+.button:hover {
+
+  box-shadow: 4px 4px 12px -5px rgb(90, 66, 66);
+  cursor: pointer;
+}
