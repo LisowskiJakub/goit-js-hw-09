@@ -52,10 +52,10 @@ startBtn.addEventListener('click', () => {
     const timerId = setInterval(() => {
         let countdown = new Date(inputFlatPickr.value) - new Date();
         let distance = convertMs(countdown);
-        spanDays.textContent = distance.days;
-        spanHours.textContent = distance.hours;
-        spanMinutes.textContent = distance.minutes;
-        spanSeconds.textContent = distance.seconds;
+        spanDays.textContent = addLeadingZero(distance.days);
+        spanHours.textContent = addLeadingZero(distance.hours);
+        spanMinutes.textContent = addLeadingZero(distance.minutes);
+        spanSeconds.textContent = addLeadingZero(distance.seconds);
 
         if (countdown < 1000) {
             clearInterval(timerId);
